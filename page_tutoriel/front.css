@@ -1,0 +1,168 @@
+/* --- CONFIGURATION DE BASE --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000; /* Fond noir */
+  font-family: "Roboto", sans-serif; /* Police standard lisible */
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- LOGO --- */
+.en-tete {
+  padding: 20px;
+  width: 100%;
+}
+
+.logo-principal {
+  width: 150px; /* Ajustez selon votre image */
+  height: auto;
+}
+
+/* --- CONTENEUR CENTRAL --- */
+.conteneur-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Prend l'espace restant */
+  padding-bottom: 40px;
+  width: 100%;
+  max-width: 500px; /* Largeur max pour ressembler à un mobile/app */
+  margin: 0 auto; /* Centre le bloc sur l'écran */
+}
+
+/* --- CARTE HERO (Le carré noir avec la chaussure) --- */
+.carte-hero {
+  background-color: #111111; /* Gris très très foncé */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  width: 280px;
+  margin-bottom: 40px;
+  /* Légère ombre pour détacher la carte du fond noir */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+.image-chaussure {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  /* Légère rotation comme sur l'image */
+  transform: rotate(-15deg);
+}
+
+.titre-jeu {
+  font-family: "Anton", sans-serif; /* Police épaisse style titre */
+  font-size: 2.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- LISTE DES INSTRUCTIONS --- */
+.liste-instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espace entre les étapes */
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.etape {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Les petits carrés gris des icônes */
+.icone-boite {
+  background-color: #222222; /* Gris foncé */
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+}
+
+.icone-boite img {
+  width: 24px;
+  height: 24px;
+}
+
+.texte-etape {
+  font-size: 0.9rem;
+  font-weight: 700; /* Gras */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+/* --- BOUTON ROUGE --- */
+.bouton-demarrer {
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  text-transform: lowercase; /* Comme sur l'image "commencer le jeu" */
+  font-variant: small-caps; /* Optionnel : petites majuscules */
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.bouton-demarrer:hover {
+  background-color: #cc0000;
+}
+
+/* --- PIED DE PAGE --- */
+.pied-de-page {
+  text-align: center;
+  color: #666;
+  font-size: 0.75rem;
+  padding: 0 20px;
+}
+
+.lien-regles {
+  color: #888;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.mentions-legales {
+  line-height: 1.4;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .conteneur-principal {
+    padding: 40px 15px 30px 15px; /* Réduction des marges intérieures */
+  }
+
+  .image-logo {
+    width: 150px; /* Réduction de la taille du logo */
+  }
+
+  .bouton-jouer {
+    font-size: 20px; /* Réduction de la taille du texte */
+    padding: 10px 15px; /* Réduction de l'espace autour du texte */
+  }
+
+  .texte-conditions {
+    font-size: 12px; /* Réduction de la taille du texte en bas */
+  }
+}
