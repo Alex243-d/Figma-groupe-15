@@ -1,2 +1,2 @@
 # Figma-groupe-15
-Maquette jeu gagnanr Footlocker sur Figma
+jeu gagnant Footlocker maquetté sur Figma et codé sur VS CODE
