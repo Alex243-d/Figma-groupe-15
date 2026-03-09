@@ -1,0 +1,99 @@
+/* Réinitialisation de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 0%); /* Fond noir */
+  font-family: "Arial", sans-serif; /* Police standard sans serif */
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  display: flex;
+  justify-content: center;
+}
+
+/* Le conteneur qui centre tout verticalement */
+.conteneur-principal {
+  width: 100%;
+  max-width: 500px; /* Largeur max type mobile */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Ecarte les éléments (Haut - Milieu - Bas) */
+  padding: 60px 20px 40px 20px; /* Marges intérieures */
+}
+
+/* --- LOGO --- */
+.zone-logo {
+  margin-top: 40px; /* Ajuste la hauteur du logo depuis le haut */
+  text-align: center;
+}
+
+.image-logo {
+  width: 180px; /* Taille approximative du logo, à ajuster */
+  height: auto;
+  display: block;
+}
+
+/* --- BOUTON JOUER --- */
+.zone-action {
+  /* Cette astuce pousse le bouton vers le bas, mais pas tout en bas */
+  margin-top: auto;
+  margin-bottom: 50px; /* Augmenté pour descendre le bouton */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bouton-jouer {
+  background-color: #ff0000; /* Rouge vif Foot Locker */
+  color: rgb(255, 255, 255);
+  font-size: 15px; /* Gros texte */
+  font-weight: 500px; /* Très gras */
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 25px; /* Espace autour du texte */
+  width: 100px; /* Largeur du rectangle rouge */
+  text-align: center;
+  font-family:
+    "Impact", "Arial Black", sans-serif; /* Police épaisse style affiche */
+  letter-spacing: 1px;
+}
+
+.bouton-jouer:hover {
+  background-color: #cc0000; /* Léger effet au survol (optionnel) */
+  cursor: pointer;
+}
+
+/* --- TEXTE DU BAS --- */
+.zone-bas-page {
+  text-align: center;
+}
+
+.texte-conditions {
+  color: #666666; /* Gris foncé */
+  font-size: 12px; /* Petit texte */
+  font-weight: 300px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .conteneur-principal {
+    padding: 40px 15px 30px 15px; /* Réduction des marges intérieures */
+  }
+
+  .image-logo {
+    width: 150px; /* Réduction de la taille du logo */
+  }
+
+  .bouton-jouer {
+    font-size: 20px; /* Réduction de la taille du texte */
+    padding: 10px 15px; /* Réduction de l'espace autour du texte */
+  }
+
+  .texte-conditions {
+    font-size: 12px; /* Réduction de la taille du texte en bas */
+  }
+}

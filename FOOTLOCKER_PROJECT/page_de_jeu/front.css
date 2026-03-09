@@ -1,0 +1,145 @@
+/* On remet tout à zéro pour éviter les marges des navigateurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d; 
+    color: #ffffff; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Le conteneur qui aligne les 3 colonnes */
+.conteneur-global {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 20px 50px; /* Un peu de padding en haut et bas pour respirer */
+}
+
+/* =========================================
+   LES ÉTAGÈRES (GAUCHE ET DROITE)
+   ========================================= */
+.etagere {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 30px; 
+}
+
+.image-chaussure {
+    width: 130px; 
+    height: auto;
+}
+
+.planche {
+    width: 150px;
+    height: 8px;
+    background-color: #1a1a1a; 
+    margin-top: -15px; 
+    box-shadow: 0px 5px 10px #000000; 
+}
+
+/* =========================================
+   LA ZONE CENTRALE DU JEU
+   ========================================= */
+.zone-jeu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px; 
+}
+
+/* La grille 3x3 */
+.grille-carres {
+    display: grid;
+    /* Toujours 3 colonnes. Vu qu'on a 9 carrés, le CSS va créer 3 lignes automatiquement ! */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    margin-bottom: 5px; 
+}
+
+/* Les 9 carrés rouges à gratter */
+.carre-rouge {
+    background-color: #d32323; 
+    /* J'ai réduit la taille à 120px pour que les 9 carrés tiennent bien en hauteur */
+    width: 120px;
+    height: 120px; 
+    border: 2px solid #000000;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 10px #000000; 
+}
+
+.planche-centrale {
+    width: 100%;
+    height: 8px;
+    background-color: #1a1a1a;
+    box-shadow: 0px 5px 10px #000000;
+    margin-bottom: 40px; 
+}
+
+.titre-jeu {
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px; 
+    line-height: 1; 
+}
+
+.bouton-jouer {
+    background-color: #d32323; 
+    color: #ffffff;
+    border: none;
+    padding: 15px 0;
+    width: 100%; 
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 10px; 
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.bouton-jouer:hover {
+    background-color: #a81c1c; 
+}
+
+.texte-regles {
+    color: #cccccc; 
+    font-size: 18px;
+}
+
+/* =========================================
+   VERSION MOBILE (TÉLÉPHONE)
+   ========================================= */
+@media (max-width: 950px) {
+    .conteneur-global {
+        padding: 20px;
+        justify-content: center; 
+    }
+
+    /* On cache les étagères sur téléphone */
+    .etagere {
+        display: none; 
+    }
+
+    .zone-jeu {
+        width: 100%;
+    }
+
+    /* On réduit la taille des carrés pour que la grille 3x3 passe sur un petit écran */
+    .carre-rouge {
+        width: 90px;
+        height: 90px;
+    }
+
+    .titre-jeu {
+        font-size: 45px;
+    }
+
+    .bouton-jouer {
+        font-size: 28px;
+    }
+}

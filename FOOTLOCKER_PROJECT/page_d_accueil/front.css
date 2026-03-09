@@ -1,0 +1,231 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style général du corps de la page */
+body {
+  background-color: #000000; /* Fond noir */
+  font-family: "Arial", "Helvetica", sans-serif; /* Police sans-serif */
+  color: white;
+  height: 100vh; /* aide à prendre la hauteur de l'écran */
+  overflow: hidden; /* Empêche le défilement si les images dépassent un peu */
+}
+
+/* Conteneur principal pour utiliser Flexbox */
+.conteneur-global {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative; /* pour le positionnement des décorations */
+  padding: 20px;
+}
+
+/* pour les elements de decorations */
+
+.decoration-gauche-haut {
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  z-index: 1; /* position par rapport au contenu central */
+}
+
+.decoration-gauche-haut img {
+  max-width: 250px; /* Ajuste la taille de l' image */
+  height: auto;
+}
+
+.decoration-gauche-bas {
+  position: absolute;
+  bottom: -78px; /* plus c'est negatif plus ca descend */
+  left: 0;
+  z-index: 1;
+}
+
+.decoration-gauche-bas img {
+  max-width: 250px; /* Ajuste la taille de l' image */
+  height: auto;
+}
+
+.decoration-droite {
+  position: absolute;
+  bottom: -215px; /* plus c'est negatif plus ca monte */
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%); /* pour centré verticalement */
+  z-index: 1;
+}
+
+.decoration-droite img {
+  max-height: 90vh; /* Prend presque toute la hauteur */
+  width: auto;
+}
+
+/* contenu central */
+
+.contenu-central {
+  z-index: 10; /* Place le contenu au dessus des décorations */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* Espace entre les éléments centraux */
+}
+
+/* Logo */
+.image-logo {
+  width: 180px; /* Ajuste selon la taille du logo */
+  height: auto;
+}
+
+/* style du titre */
+
+.titre-grp {
+  font-family: "Anton", sans-serif; /* Police épaisse */
+  font-size: 5rem; /* c'est pour la taille  */
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.8; /* Resserre les lignes */
+  margin: 30px 0;
+
+  /* inclinaison  */
+  transform: rotate(-6deg) skewX(-10deg);
+}
+
+.mot-blanc {
+  color: #ffffff;
+  z-index: 1; /* Derrière */
+  position: relative;
+  left: -10px; /* Décalage gauche */
+}
+
+.mot-rouge-texture {
+  z-index: 2; /* mise en avant */
+  position: relative;
+
+  /* pour que que le mot SCRATCH se combine bien sur SNEAKER */
+  margin-top: -45px;
+
+  left: 10px; /* Décalage droite */
+
+  /* ca nous donne un effet de dégradé */
+  background: linear-gradient(to bottom, #ff3b3b 20%, #8a0000 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  /* Ombre pour bien détacher le texte */
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
+}
+
+/* La Version Mobile */
+@media (max-width: 600px) {
+  .titre-grp {
+    font-size: 3.5rem;
+  }
+  .mot-rouge-texture {
+    margin-top: -30px;
+  }
+}
+
+/* Sous-titre */
+.sous-titre {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Bouton "GRATTE TA PAIRE!" */
+.bouton-rouge {
+  display: inline-block;
+  background-color: #ff0000;
+  color: white;
+  font-family: "Impact", "Arial Black", sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transition douce au survol */
+}
+
+.bouton-rouge:hover {
+  background-color: #cc0000; /* Rouge un peu plus foncé au survol */
+}
+
+/* Le footer*/
+
+.pied-de-page {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.lien-conditions {
+  color: #888888; /* Gris clair */
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.lien-conditions:hover {
+  text-decoration: underline;
+}
+
+/* pour le responsive */
+@media (max-width: 768px) {
+  .conteneur-principal {
+    padding: 40px 15px 30px 15px; /* Réduction intérieures */
+  }
+
+  .image-logo {
+    width: 150px; /* Réduit  la taille du logo */
+  }
+
+  .bouton-jouer {
+    font-size: 20px; /* Réduction de la taille du texte */
+    padding: 10px 15px; /* Réduction de l'espace autour du texte */
+  }
+
+  .texte-conditions {
+    font-size: 12px; /* Réduction de la taille du texte en bas */
+  }
+}
+
+/*  Responsive Design Amélioré  */
+@media (max-width: 768px) {
+  .decoration-gauche-haut img,
+  .decoration-gauche-bas img,
+  .decoration-droite img {
+    max-width: 150px; /* Réduction des images décoratives */
+    max-height: 50vh; /* Limite la hauteur */
+  }
+
+  .image-logo {
+    width: 120px; /* Réduit en plus pour le logo */
+  }
+
+  .titre-grp {
+    font-size: 3rem; /* Réduction de la taille du titre */
+    margin: 20px 0;
+  }
+
+  .bouton-rouge {
+    font-size: 1.5rem; /* Réduction de la taille du bouton */
+    padding: 10px 20px; /* Ajustement internes */
+  }
+
+  .pied-de-page {
+    font-size: 0.7rem; /* Réduction de la taille du texte du footer*/
+  }
+}
