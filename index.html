@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footlocker</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!--FORMULAIRE-->
+    <form action="/ma-page-de-traitement" method="post">
+        <p class="title">Formulaire</p>
+        <div class="form-group">
+            <img src="img/log footlocker.png" alt="logo">
+        <ul>
+            
+            <li class="container">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="age" name="user_age" min="0" max="120" required>
+            </li>
+            <li class="container">
+  <label for="age">Âge</label>
+  <select id="age" name="user_age" required>
+    <option value="">Sélectionner</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30+</option>
+  </select>
+</li>
+
+            <div class="container">
+            <li>
+                <label for="mail">E-mail&nbsp;</label>
+                <input type="mail" id="mail" name="user_mail" required>
+            
+            
+               <li class="container">
+                <label for="address">Adresse</label>
+                <input type="text" id="address" name="user_address" required>
+            </li>
+ 
+            
+            </div>
+            <button type="reset" class="submit">Recomencer</button>
+        </ul>
+        </div>
+    </form>
+</body>
+</html>

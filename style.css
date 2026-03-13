@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FOND PAGE */
+body {
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORMULAIRE */
+form {
+  background: #000;
+  width: 360px;
+  padding: 30px;
+}
+
+/* TITRE */
+.title {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* LISTE */
+.form-group ul {
+  list-style: none;
+}
+
+/* CHAMP */
+.container {
+  margin-bottom: 20px;
+}
+
+/* LABEL */
+.container label {
+  display: block;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* INPUTS & SELECT (AGE) */
+.container input,
+.container select {
+  width: 100%;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 18px;
+  color: #fff;
+  font-size: 15px;
+  appearance: none;
+}
+
+/* FOCUS */
+.container input:focus,
+.container select:focus {
+  outline: none;
+  background: #222;
+}
+
+/* BOUTON */
+.submit {
+  width: 100%;
+  background: #444;
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* HOVER */
+.submit:hover {
+  background: #666;
+}
+
+img{
+    
+}
